@@ -65,11 +65,11 @@ namespace vmDeployment
 
             Console.WriteLine("Uploading template file...");
             var templateblob = container.GetBlockBlobReference("CreateVMTemplate.json");
-            templateblob.UploadFromFileAsync("..\\..\\CreateVMTemplate.json").Result();
+            templateblob.UploadFromFileAsync("..\\..\\CreateVMTemplate.json");
 
             Console.WriteLine("Uploading parameters file...");
             var paramblob = container.GetBlockBlobReference("Parameters.json");
-            paramblob.UploadFromFileAsync("..\\..\\Parameters.json").Result();
+            paramblob.UploadFromFileAsync("..\\..\\Parameters.json");
 
             // Deploy a template
 
