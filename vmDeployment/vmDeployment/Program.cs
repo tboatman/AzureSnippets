@@ -31,7 +31,7 @@ namespace vmDeployment
             // Create a resource group
 
             var groupName = "myResourceGroup";
-            var location = Region.USWest;
+            var location = Region.USCentral;
 
             var resourceGroup = azure.ResourceGroups.Define(groupName)
                 .WithRegion(location)
@@ -43,7 +43,7 @@ namespace vmDeployment
 
             Console.WriteLine("Creating storage account...");
             var storage = azure.StorageAccounts.Define(storageAccountName)
-                .WithRegion(Region.USWest)
+                .WithRegion(Region.USCentral)
                 .WithExistingResourceGroup(resourceGroup)
                 .Create();
 
@@ -73,6 +73,7 @@ namespace vmDeployment
 
             // Deploy a template
 
+            Console.WriteLine("Deploying the uploaded VM template...");
             var templatePath = "https://" + storageAccountName + ".blob.core.windows.net/templates/CreateVMTemplate.json";
             var paramPath = "https://" + storageAccountName + ".blob.core.windows.net/templates/Parameters.json";
             var deployment = azure.Deployments.Define("myDeployment")
@@ -81,6 +82,7 @@ namespace vmDeployment
                 .WithParametersLink(paramPath, "1.0.0.0")
                 .WithMode(Microsoft.Azure.Management.ResourceManager.Fluent.Models.DeploymentMode.Incremental)
                 .Create();
+            Console.WriteLine("Deployed!");
             Console.WriteLine("Press enter to delete the resource group...");
             Console.ReadLine();
 
