@@ -1,0 +1,23 @@
+﻿{
+  "RegionCode": "WestEurope",
+  "RegionName": "West Europe",
+  "Costs": {
+    "Hot": {
+      "DataStorageCostPerGB": 0.0196,
+      "WriteOperationsCostPerTenThousand": 0.054,
+      "ReadOperationsCostPerTenThousand": 0.0043,
+      "DataRetrievalCostPerGB": 0,
+      "DataWriteCostPerGB": 0
+    },
+    "Cool": {
+      "DataStorageCostPerGB": 0.01,
+      "WriteOperationsCostPerTenThousand": 0.10,
+      "ReadOperationsCostPerTenThousand": 0.01,
+      "DataRetrievalCostPerGB": 0.01,
+      "DataWriteCostPerGB": 0.0025
+    },
+    "Archive": null
+  }
+}
+
+

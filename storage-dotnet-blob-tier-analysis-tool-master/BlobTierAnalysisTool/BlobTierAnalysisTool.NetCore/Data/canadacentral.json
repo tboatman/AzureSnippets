@@ -1,0 +1,23 @@
+﻿{
+  "RegionCode": "CanadaCentral",
+  "RegionName": "Canada Central",
+  "Costs": {
+    "Hot": {
+      "DataStorageCostPerGB": 0.02,
+      "WriteOperationsCostPerTenThousand": 0.06,
+      "ReadOperationsCostPerTenThousand": 0.0048,
+      "DataRetrievalCostPerGB": 0,
+      "DataWriteCostPerGB": 0
+    },
+    "Cool": {
+      "DataStorageCostPerGB": 0.011,
+      "WriteOperationsCostPerTenThousand": 0.10,
+      "ReadOperationsCostPerTenThousand": 0.01,
+      "DataRetrievalCostPerGB": 0.01,
+      "DataWriteCostPerGB": 0.0025
+    },
+    "Archive": null
+  }
+}
+
+
