@@ -37,7 +37,7 @@ namespace vmDeployment
 
             Console.WriteLine("Creating storage account...");
             var storage = azure.StorageAccounts.Define(storageAccountName)
-                .WithRegion(Region.USCentral)
+                .WithRegion(location)
                 .WithExistingResourceGroup(resourceGroup)
                 .Create();
 
